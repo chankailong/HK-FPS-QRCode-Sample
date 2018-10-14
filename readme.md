@@ -10,4 +10,8 @@
 
 # Run the Sample Code
 
-`node index.js`
+`npm run dev`
+
+# Follow the Airbnb EsLint
+
+`npm run lint`
