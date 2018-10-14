@@ -1,28 +1,14 @@
 module.exports = {
     "env": {
-        "browser": false,
-        "es6": true
+        "browser": true,
+        "es6": true,
+        "node": true
     },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaVersion": 2018
-    },
-    "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "never"
-        ]
-    }
+     "parserOptions": {
+         "parser": "babel-eslint"
+     },
+    "extends": [
+        "airbnb-base"
+    ],
+    "rules": {}
 };
