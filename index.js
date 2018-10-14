@@ -55,7 +55,7 @@ function main() {
     const qrTempStr = `${payloadFormatIndicator}${pointOfInitiationMethod}${hkPaymentCode}${hkPaymentInfo}${merchantCategoryCode}${transactionCurrency}${transactionAmount}${countryCode}${merchantName}${merchantCity}${additionalInfo}${billNo}${crcValue}`
     const crcRes = calCRC(qrTempStr)
     const finalQRStr = `${qrTempStr}${crcRes}`
-    const result = QRCode.encode(finalQRStr, QRCode.ECC_H);
+    const result = QRCode.encode(finalQRStr, QRCode.ECC_L);
     let canvas = draw(result);
     let pngBuffer = canvas.toBuffer();
     fs.writeFileSync('result.png', pngBuffer);
